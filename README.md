@@ -1,2 +1,3 @@
 # kotlin-utils
-Various utilities to extend current Kotlin functionality
+Various utilities to extend current Kotlin functionality.
+Some slippery-slopes as well...
