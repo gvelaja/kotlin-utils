@@ -1,0 +1,34 @@
+//Gradle app
+ext {
+    build_gradle_version = '3.2.0-alpha15'
+    kotlin_version = '1.2.51'
+    lifecycle_version = '1.1.1'
+    anko_version = '0.10.5'
+    androidx_version = '1.0.0-beta01'
+    androidx_lifecycle_version = '2.0.0-beta01'
+}
+...
+dependencies{
+...
+  classpath classpath "com.android.tools.build:gradle:$build_gradle_version"
+...
+}
+...
+//Gradle module
+implementation "androidx.recyclerview:recyclerview:$androidx_version"
+implementation "com.google.android.material:material:$androidx_version"
+implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+implementation "androidx.appcompat:appcompat:$androidx_version"
+
+implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+implementation "org.jetbrains.anko:anko:$anko_version"
+implementation "org.jetbrains.anko:anko-coroutines:$anko_version"
+implementation files('../nativecore/libs/unsigned.jar')
+// ViewModel and LiveData: https://developer.android.com/topic/libraries/architecture/adding-component
+implementation "androidx.lifecycle:lifecycle-extensions:$androidx_lifecycle_version"
+annotationProcessor "androidx.lifecycle:lifecycle-compiler:$androidx_lifecycle_version"
+implementation "androidx.lifecycle:lifecycle-reactivestreams:$androidx_lifecycle_version"
+
+//gradle-wrapper.properties
+...
+distributionUrl=https\://services.gradle.org/distributions/gradle-4.6-all.zip
